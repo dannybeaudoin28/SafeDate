@@ -1,14 +1,14 @@
 package beaudoin.safedate.Controllers;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @Author: Danny Beaudoin
  * @Date: 06-11-2022
  */
-@Controller
+@RestController
 public class MainController {
 
     /**
