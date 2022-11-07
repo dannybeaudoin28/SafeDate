@@ -33,6 +33,9 @@ public class MessageModel {
     @Column(name = "SENT_FROM")
     private Integer sentFrom;
 
+    @Column(name = "SENT_TO")
+    private Integer sentTo;
+
     @Column(name = "MSG_HEADER")
     private String messageHeader;
 
