@@ -68,13 +68,13 @@ import java.util.stream.Collectors;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/admin")
 @RequiredArgsConstructor
 @Slf4j
 public class UserResource {
     private final UserService userService;
 
-    @GetMapping("users")
+    @GetMapping("/users")
     public ResponseEntity<List<User>> getUsers() {
         return ResponseEntity.ok().body(userService.getUsers());
     }
