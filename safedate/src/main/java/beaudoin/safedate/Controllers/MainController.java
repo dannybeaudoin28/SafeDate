@@ -20,37 +20,7 @@ import beaudoin.safedate.Services.MessageService;
  * @Author: Danny Beaudoin
  * @Date: 06-11-2022
  */
-@RestController(value = "api/messaging")
+@RestController(value = "api/home")
 public class MainController {
-    @Autowired
-    private MessageService messageService;
-
-    /**
-     * 
-     * @return a ResponseEntity that contains a list of all messages to the
-     *         client.
-     */
-    @GetMapping("/viewAllMessages")
-    public ResponseEntity<?> getAllMessages(@RequestHeader(value = "Authorization") String authHeader) {
-        return messageService.getAllMessages();
-    }
-
-    @GetMapping("/searchMessages")
-    public ResponseEntity<?> searchMessages(String searchCriteria) {
-        return messageService.searchMessages(searchCriteria);
-    }
-
-    @GetMapping("/searchMessagesById")
-    public ResponseEntity<?> searchMessagesById(Integer msgId) {
-        return messageService.searchMessagesById(msgId);
-    }
-
-    @PostMapping("/sendMessage")
-    public ResponseEntity<?> sendMessage(
-        @RequestParam Integer sendTo,
-        @RequestParam Integer sendFrom,
-        @RequestParam String msgBody) {
-
-        return messageService.sendMessage(sendFrom, sendTo, msgBody);
-    }
+    
 }
